@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSP Empleados</title>
+    <script src="./Persona.js"></script>
+    <script src="./Empleado.js"></script>
+    <script src="./funciones.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <h2>ABM Empleados</h2>
+    <div class="container-modificar" id="container-modificar">
+
+        <form class="form-modificar">
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad">
+
+            <label for="legajo">Legajo:</label>
+            <input type="number" id="legajo">
+            
+            <label for="horario">Horario:</label>
+            <br>
+            <select name="EHorario" id="horario">
+                <option value="Mañana" selected>Mañana</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noche">Noche</option>
+                </select>
+            <br>
+            <div class="container-botones">
+                <button class="botonModificar" type="button" id="btnGuardar">Guardar</button>
+                <button class="botonEliminar" type="button" id="btnEliminar">Eliminar</button>
+            </div>
+        </form>
+    </div>
+
+    <h1>Filtros</h1>
+
+    <div class="filtros">
+            <label for="filtrar">Filtrar por horario: </label>
+            <select name="filtro-personas" id="filtroHorario">
+                <option value="Mañana">Mañana</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noche">Noche</option>
+            </select>
+            <label for="promedio">Promedio de edad: </label>
+            <input type="number" name="promedio" id="promedio" disabled>
+
+            <button class="calc-promedio" type="button" id="btnPromedio">Calcular Promedio</button>
+    </div>
+
+
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Legajo</th>
+                <th>Horario</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="tCuerpo"></tbody>
+    </table>
+
+
+    <div class="campos">
+        <button class="botonCerrar" type="button" id="btnMostrar">Mostrar nombres y apellidos</button>
+    </div>
+
+
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+        <tbody id="tCuerpoNA"></tbody>
+    </table>
+</body>
+</html>
